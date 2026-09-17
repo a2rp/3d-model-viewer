@@ -28,7 +28,7 @@ const DEFAULT_VIEWER_STATE = {
     shadows: true,
 };
 
-const ViewerApp = () => {
+const ViewerApp = ({ assetBaseUrl = import.meta.env.BASE_URL }) => {
     const viewerContainerRef = useRef(null);
     const objectUrlRef = useRef(null);
 
@@ -84,7 +84,9 @@ const ViewerApp = () => {
 
             if (!SUPPORTED_MODEL_EXTENSIONS.includes(type)) {
                 setError(
-                    "Unsupported model format. Please choose a GLB, GLTF, OBJ, or STL file.",
+                    `Unsupported model format. Supported formats: ${SUPPORTED_MODEL_EXTENSIONS.map(
+                        (extension) => extension.toUpperCase(),
+                    ).join(", ")}.`,
                 );
                 return;
             }
@@ -115,7 +117,7 @@ const ViewerApp = () => {
         releaseObjectUrl();
 
         setModel({
-            url: `${import.meta.env.BASE_URL}models/sample.glb`,
+            url: `${assetBaseUrl}models/sample.glb`,
             type: "glb",
             name: "sample.glb",
             size: null,
@@ -127,7 +129,7 @@ const ViewerApp = () => {
         resetAnimationState();
 
         setFitModelSignal((value) => value + 1);
-    }, [releaseObjectUrl, resetAnimationState]);
+    }, [assetBaseUrl, releaseObjectUrl, resetAnimationState]);
 
     const handleClearModel = useCallback(() => {
         releaseObjectUrl();

@@ -13,17 +13,7 @@ export default defineConfig({
             filename: "remoteEntry.js",
 
             exposes: {
-                "./App": "./src/remote/RemoteApp.jsx",
-            },
-
-            shared: {
-                react: {
-                    singleton: true,
-                },
-
-                "react-dom": {
-                    singleton: true,
-                },
+                "./mount": "./src/remote/mount.jsx",
             },
 
             dts: false,
