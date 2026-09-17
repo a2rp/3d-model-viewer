@@ -1,0 +1,109 @@
+.wrapper {
+    padding: 18px;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.header > svg {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--color-text-soft);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.title {
+    font-size: 1rem;
+}
+
+.rows {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 10px;
+    min-height: 36px;
+    padding: 8px 10px;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.65rem;
+}
+
+.row:last-child {
+    border-bottom: 0;
+}
+
+.row span {
+    color: var(--color-text-soft);
+}
+
+.row strong {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--color-text-muted);
+    font-weight: 400;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dimensions {
+    margin-top: 14px;
+}
+
+.dimensionTitle {
+    color: var(--color-text-soft);
+    font-size: 0.63rem;
+}
+
+.dimensionGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-top: 7px;
+}
+
+.dimensionGrid div {
+    padding: 8px;
+    text-align: center;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.dimensionGrid span,
+.dimensionGrid strong {
+    display: block;
+}
+
+.dimensionGrid span {
+    color: var(--color-text-soft);
+    font-size: 0.58rem;
+}
+
+.dimensionGrid strong {
+    margin-top: 3px;
+    color: var(--color-text-muted);
+    font-family: monospace;
+    font-size: 0.65rem;
+    font-weight: 400;
+}

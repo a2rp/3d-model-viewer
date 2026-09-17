@@ -1,0 +1,194 @@
+.wrapper {
+    padding: 18px;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.header > svg {
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--color-text-soft);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.title {
+    font-size: 1rem;
+}
+
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 210px;
+    padding: 20px;
+    text-align: center;
+    background: #0b0b0c;
+    border: 1px dashed var(--color-border-strong);
+    border-radius: var(--radius-md);
+    transition:
+        border-color var(--transition-fast),
+        background var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.dragging {
+    background: #141414;
+    border-color: var(--color-text);
+    transform: scale(1.01);
+}
+
+.uploadIcon {
+    margin-bottom: 12px;
+    color: var(--color-text-muted);
+    font-size: 2rem;
+}
+
+.dropTitle {
+    color: var(--color-text);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.dropText {
+    margin-top: 3px;
+    color: var(--color-text-soft);
+    font-size: 0.68rem;
+}
+
+.primaryButton,
+.sampleButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 38px;
+    border-radius: var(--radius-sm);
+    font-size: 0.72rem;
+    font-weight: 700;
+    transition:
+        transform var(--transition-fast),
+        background var(--transition-fast);
+}
+
+.primaryButton {
+    margin-top: 16px;
+    padding: 0 14px;
+    color: var(--color-accent-text);
+    background: var(--color-accent);
+}
+
+.primaryButton:hover,
+.sampleButton:hover {
+    transform: translateY(-1px);
+}
+
+.input {
+    display: none;
+}
+
+.currentModel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.modelName {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--color-text-muted);
+    font-size: 0.68rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.removeButton {
+    flex: 0 0 auto;
+    color: var(--color-danger);
+}
+
+.sampleButton {
+    width: 100%;
+    margin-top: 10px;
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.sampleButton:hover {
+    background: var(--color-surface-hover);
+}
+
+.note {
+    margin-top: 12px;
+    color: var(--color-text-soft);
+    font-size: 0.62rem;
+    line-height: 1.5;
+}
+
+.formatSummary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.formatSummary > span {
+    min-width: 0;
+
+    overflow: hidden;
+
+    color: var(--color-text-soft);
+
+    font-size: 0.56rem;
+    line-height: 1.5;
+
+    text-overflow: ellipsis;
+}
+
+.guideButton {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 6px;
+
+    min-height: 30px;
+    padding: 0 9px;
+
+    color: var(--color-text-muted);
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    font-size: 0.6rem;
+}
+
+.guideButton:hover {
+    color: var(--color-text);
+    background: var(--color-surface-hover);
+}
