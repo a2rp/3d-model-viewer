@@ -2,8 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { federation } from "@module-federation/vite";
 
-export default defineConfig({
-    base: "/3d-model-viewer/",
+export default defineConfig(({ command }) => ({
+    // GitHub Pages serves this project from a subpath; local Vite serves it from the root.
+    base: command === "build" ? "/3d-model-viewer/" : "/",
 
     plugins: [
         react(),
@@ -24,4 +25,4 @@ export default defineConfig({
         target: "esnext",
         sourcemap: false,
     },
-});
+}));
