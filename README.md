@@ -4,6 +4,10 @@ A browser-based 3D model viewer built with React, Three.js, React Three Fiber, a
 
 Load, inspect, rotate, zoom, analyze, and capture popular 3D model formats directly in the browser.
 
+## Preview
+
+![3D Model Viewer interface](screenshot.png)
+
 ## Features
 
 - Drag and drop model loading
