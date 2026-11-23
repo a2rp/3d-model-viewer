@@ -1,25 +1,37 @@
+import {
+    FaCodepen,
+    FaGithub,
+    FaGlobe,
+    FaHandHoldingHeart,
+    FaLinkedinIn,
+} from "react-icons/fa6";
 import styles from "./styles.module.css";
 
 const links = [
     {
         label: "Portfolio",
         url: "https://www.ashishranjan.net",
+        Icon: FaGlobe,
     },
     {
         label: "GitHub",
         url: "https://github.com/a2rp",
+        Icon: FaGithub,
     },
     {
         label: "CodePen",
         url: "https://codepen.io/ash1198",
+        Icon: FaCodepen,
     },
     {
         label: "LinkedIn",
         url: "https://www.linkedin.com/in/aashishranjan",
+        Icon: FaLinkedinIn,
     },
     {
         label: "Support",
         url: "https://a2rp-donation-page.netlify.app/",
+        Icon: FaHandHoldingHeart,
     },
 ];
 
@@ -39,14 +51,15 @@ const Footer = () => {
                 </p>
 
                 <nav className={styles.links} aria-label="Footer links">
-                    {links.map((link) => (
+                    {links.map(({ label, url, Icon }) => (
                         <a
-                            key={link.label}
-                            href={link.url}
+                            key={label}
+                            href={url}
                             target="_blank"
                             rel="noreferrer"
                         >
-                            {link.label}
+                            <Icon aria-hidden="true" />
+                            <span>{label}</span>
                         </a>
                     ))}
                 </nav>

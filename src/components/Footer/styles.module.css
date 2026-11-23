@@ -34,13 +34,25 @@
 }
 
 .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: var(--color-text-muted);
     font-size: 0.7rem;
-    transition: color var(--transition-fast);
+    text-decoration: none;
+    transition:
+        color var(--transition-fast),
+        box-shadow var(--transition-fast);
 }
 
 .links a:hover {
     color: var(--color-text);
+    box-shadow: 0 5px 14px rgb(0 0 0 / 24%);
+}
+
+.links svg {
+    flex: 0 0 auto;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 760px) {
